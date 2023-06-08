@@ -113,7 +113,7 @@ function check_letter() {
       //alert("You lost!")
       c_msg.style.display = 'flex';
       c_msg.children[0].style.backgroundColor = 'darkred';
-      c_msg.children[0].innerHTML = 'Game over!<hr>The word was: '+word;
+      c_msg.children[0].innerHTML = 'Game over!<hr><em>The word was: '+word+"</em>";
       setTimeout(() => {
         c_msg.style.display = 'none';
         take_word();
@@ -182,7 +182,7 @@ function fill_time_bar() {
       //alert("You lost!")
       c_msg.style.display = 'flex';
       c_msg.children[0].style.backgroundColor = 'darkred';
-      c_msg.children[0].innerHTML = 'Game over!<hr>The word was: '+word;
+      c_msg.children[0].innerHTML = 'Game over!<hr><em>The word was: '+word+"</em>";
       setTimeout(() => {
         c_msg.style.display = 'none';
         take_word();
