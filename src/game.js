@@ -48,7 +48,7 @@ window.onload = () => {
   window.addEventListener("keydown", (e)=>{
     if(e.keyCode == 13 || e.keyCode == 32){
       if(i_focused){
-        alert("OK!")
+        check_letter()
       }
     }
   })
