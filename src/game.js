@@ -11,6 +11,7 @@ let word;
 let c_word;
 let i_letter;
 let words = ['dog', 'cat', 'response'];
+let i_focused = false
 
 window.onload = () => {
   c_msg = document.getElementById('c-msg');
@@ -19,6 +20,10 @@ window.onload = () => {
   btn_v = document.getElementById('validate');
   btn_r_w = document.getElementById('rand-w');
   bxs_errors = document.querySelectorAll('.error');
+
+  i_letter.addEventListener("focus", ()=>{
+    i_focused = true
+  })
 
   let containers_l = document.querySelectorAll('.container-logo');
   render_logo(containers_l[0], '5vh', '4vh bold monospace');
@@ -39,6 +44,14 @@ window.onload = () => {
     btn.style.backgroundColor = 'whitesmoke';
     btn.style.color = 'darkgray';
   });
+
+  window.addEventListener("keydown", (e)=>{
+    if(e.keyCode == 13 || e.keyCode == 32){
+      if(i_focused){
+        alert("OK!")
+      }
+    }
+  })
 };
 
 function start_game() {
