@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hangman Game</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.css" />
     <script src="src/game.js"></script>
-</head>
-<body>
-    <div id="c-msg"> 
-        <div>
-          You win 
-        </div> 
-       </div> 
-       <header> 
-        <div class="container-logo"></div> 
-        <h1>Hangman Game</h1> 
-       </header> 
-       <main> 
-        <section id="controle-zone"> <button id="btn-init-stop" onclick="process_action(this)">Start</button> 
-         <div id="time-bar"> 
-          <div> 
-          </div> 
-         </div> 
-        </section> 
-        <section id="game-zone"> 
-         <div id="l-errors"> 
-          <div class="error"></div> 
-          <div class="error"></div> 
-          <div class="error"></div> 
-          <div class="error"></div> 
-         </div> 
-         <input disabled onchange="check_letter()" type="text" id="i-letter"> <button disabled id="validate" onclick="check_letter()">Check</button> <button disabled onclick="take_word()" id="rand-w">Random word</button> 
-         <div id="c-word"> 
-         </div> <canva id="c-boneco">
-           Your navigator don't support canva! 
-         </canva> 
-        </section> 
-       </main> 
-       <footer> 
-        <div class="container-logo"></div> 
-        <p> All right reserved to TechnoPro © <span>2023</span> </p> 
-       </footer> 
-</body>
+  </head>
+  <body>
+    <div id="c-msg">
+      <div>You win</div>
+    </div>
+    <header>
+      <div class="container-logo"></div>
+      <h1>Hangman Game</h1>
+    </header>
+    <main>
+      <section id="controle-zone">
+        <button id="btn-init-stop" onclick="process_action(this)">Start</button>
+        <div id="time-bar">
+          <div></div>
+        </div>
+      </section>
+      <section id="game-zone">
+        <div id="l-errors">
+          <div class="error"></div>
+          <div class="error"></div>
+          <div class="error"></div>
+          <div class="error"></div>
+        </div>
+        <input disabled onchange="check_letter()" type="text" id="i-letter" />
+        <button disabled id="validate" onclick="check_letter()">Check</button>
+        <button disabled onclick="take_word()" id="rand-w">Random word</button>
+        <div id="c-word"></div>
+        <canva id="c-boneco"> Your navigator don't support canva! </canva>
+      </section>
+    </main>
+    <footer>
+      <div class="container-logo"></div>
+      <p>All right reserved to TechnoPro © <span>2023</span></p>
+    </footer>
+  </body>
 </html>

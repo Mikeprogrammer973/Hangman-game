@@ -1,162 +1,168 @@
 @charset "UTF-8";
 
-*{
-  margin:0px;
-    padding:0px;
-      box-sizing:border-box;
-        font-family:monospace;
-        }
-        @keyframes bar{
-          from{
-              width:0%;
-                }
-                  to{
-                      width:100%;
-                        }
-                        }
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+@keyframes bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 
-                        #c-msg{
-                          position:fixed;
-                            width:100%;
-                              height:100%;
-                                display:none;
-                                  justify-content: center;
-                                    align-items: center;
-                                      color:white;
-                                        font:3vh bold monospace;
-                                          background-color:rgb(0, 0, 0, 0.78)
-                                          }
-                                          #c-msg > *{
-                                            padding:5vh;
-                                              display:inline-flex;
-                                                justify-content:center;
-                                                  align-items:center;
-                                                    background-color: teal;
-                                                      border-radius: 3vh;
-                                                      }
+#c-msg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font: 3vh bold monospace;
+  background-color: rgb(0, 0, 0, 0.78);
+}
+#c-msg > * {
+  padding: 5vh;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+  border-radius: 3vh;
+}
 
-                                                      header,main,footer{
-                                                        width:100%;
-                                                          margin:0px;
-                                                            border: 1px solid transparent;
-                                                              padding: 2vh;
-                                                              }
+header,
+main,
+footer {
+  width: 100%;
+  margin: 0px;
+  border: 1px solid transparent;
+  padding: 2vh;
+}
 
-                                                              header, footer{
-                                                                display:flex;
-                                                                  background-color: black;
-                                                                    color:whitesmoke;
-                                                                      justify-content: left;
-                                                                        align-items:center;
-                                                                        }
-                                                                        header h1{
-                                                                            font-size: 4vh;
-                                                                                padding-left:2vh;
-                                                                                }
-                                                                                footer p{
-                                                                                    font-size: 1.5vh;
-                                                                                        padding-left:2vh;
-                                                                                        }
-                                                                                        .container-logo{
-                                                                                          display:inline-flex;
-                                                                                            align-items:center;
-                                                                                              flex-direction:row;
-                                                                                                justify-content: left;
-                                                                                                }
+header,
+footer {
+  display: flex;
+  background-color: black;
+  color: whitesmoke;
+  justify-content: left;
+  align-items: center;
+}
+header h1 {
+  font-size: 4vh;
+  padding-left: 2vh;
+}
+footer p {
+  font-size: 1.5vh;
+  padding-left: 2vh;
+}
+.container-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: left;
+}
 
-                                                                                                #controle-zone{
-                                                                                                    display:flex;
-                                                                                                    }
-                                                                                                    #btn-init-stop{
-                                                                                                        color: darkgray;
-                                                                                                            background-color: whitesmoke;
-                                                                                                                padding: 2vh;
-                                                                                                                    font-size: 2vh;
-                                                                                                                        border:none;
-                                                                                                                            box-shadow: 2px 2px 1px rgb(0, 0, 0, 0.243);
-                                                                                                                                border-radius: 3vh;
-                                                                                                                                    cursor:pointer;
-                                                                                                                                    }
-                                                                                                                                    #time-bar{
-                                                                                                                                        width:60%;
-                                                                                                                                            padding: .1vh;
-                                                                                                                                                margin-left:2vh;
-                                                                                                                                                    border: 2px solid lightgray;
-                                                                                                                                                        border-radius: 3vh;
-                                                                                                                                                        }
-                                                                                                                                                        #time-bar *{
-                                                                                                                                                            /*animation: 5s linear bar infinite;*/
-                                                                                                                                                                height:100%;
-                                                                                                                                                                    background-color:green;
-                                                                                                                                                                        width:0%;
-                                                                                                                                                                            border-radius: 3vh;
-                                                                                                                                                                            }
+#controle-zone {
+  display: flex;
+}
+#btn-init-stop {
+  color: darkgray;
+  background-color: whitesmoke;
+  padding: 2vh;
+  font-size: 2vh;
+  border: none;
+  box-shadow: 2px 2px 1px rgb(0, 0, 0, 0.243);
+  border-radius: 3vh;
+  cursor: pointer;
+}
+#time-bar {
+  width: 60%;
+  padding: 0.1vh;
+  margin-left: 2vh;
+  border: 2px solid lightgray;
+  border-radius: 3vh;
+}
+#time-bar * {
+  /*animation: 5s linear bar infinite;*/
+  height: 100%;
+  background-color: green;
+  width: 0%;
+  border-radius: 3vh;
+}
 
-                                                                                                                                                                            #l-errors, #c-word{
-                                                                                                                                                                              width:100%;
-                                                                                                                                                                                margin:3vh 0px;
-                                                                                                                                                                                  padding:1vh;
-                                                                                                                                                                                    display:flex;
-                                                                                                                                                                                    }
-                                                                                                                                                                                    .error{
-                                                                                                                                                                                      display: flex;
-                                                                                                                                                                                        width:5vh;
-                                                                                                                                                                                          height:5vh;
-                                                                                                                                                                                            font: 1.5vh bolder monospace;
-                                                                                                                                                                                              color:white;
-                                                                                                                                                                                                justify-content:center;
-                                                                                                                                                                                                  align-items:center;
-                                                                                                                                                                                                    background-color: green;
-                                                                                                                                                                                                      border: none;
-                                                                                                                                                                                                        border-radius:50%;
-                                                                                                                                                                                                          margin:1vh;
-                                                                                                                                                                                                            box-shadow:2px 2px 1px rgb(0, 0, 0, 0.126);
-                                                                                                                                                                                                            }
-                                                                                                                                                                                                            #i-letter, #validate, #rand-w{
-                                                                                                                                                                                                              background-color: whitesmoke;
-                                                                                                                                                                                                                width:20%;
-                                                                                                                                                                                                                  display:inline-block;
-                                                                                                                                                                                                                    text-align:center;
-                                                                                                                                                                                                                      padding:1vh;
-                                                                                                                                                                                                                        outline:none;
-                                                                                                                                                                                                                          border:none;
-                                                                                                                                                                                                                            border-radius:2vh;
-                                                                                                                                                                                                                              box-shadow:2px 2px 1px rgb(0, 0, 0, 0.167);
-                                                                                                                                                                                                                              }
-                                                                                                                                                                                                                              #validate, #rand-w{
-                                                                                                                                                                                                                                margin:2vh 0px;
-                                                                                                                                                                                                                                  background-color:whitesmoke;
-                                                                                                                                                                                                                                    color: green;
-                                                                                                                                                                                                                                      font-weight: bolder;
-                                                                                                                                                                                                                                        cursor:pointer;
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                        #validate:hover{
-                                                                                                                                                                                                                                          color:whitesmoke;
-                                                                                                                                                                                                                                            background-color:green;
-                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                            #rand-w{
-                                                                                                                                                                                                                                              width:40%;
-                                                                                                                                                                                                                                                color: darkgray;
-                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                #rand-w:hover{
-                                                                                                                                                                                                                                                  color:black;
-                                                                                                                                                                                                                                                  }
+#l-errors,
+#c-word {
+  width: 100%;
+  margin: 3vh 0px;
+  padding: 1vh;
+  display: flex;
+}
+.error {
+  display: flex;
+  width: 5vh;
+  height: 5vh;
+  font: 1.5vh bolder monospace;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  border: none;
+  border-radius: 50%;
+  margin: 1vh;
+  box-shadow: 2px 2px 1px rgb(0, 0, 0, 0.126);
+}
+#i-letter,
+#validate,
+#rand-w {
+  background-color: whitesmoke;
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  padding: 1vh;
+  outline: none;
+  border: none;
+  border-radius: 2vh;
+  box-shadow: 2px 2px 1px rgb(0, 0, 0, 0.167);
+}
+#validate,
+#rand-w {
+  margin: 2vh 0px;
+  background-color: whitesmoke;
+  color: green;
+  font-weight: bolder;
+  cursor: pointer;
+}
+#validate:hover {
+  color: whitesmoke;
+  background-color: green;
+}
+#rand-w {
+  width: 40%;
+  color: darkgray;
+}
+#rand-w:hover {
+  color: black;
+}
 
-                                                                                                                                                                                                                                                  #c-word{
-                                                                                                                                                                                                                                                    display: block;
-                                                                                                                                                                                                                                                      border:1px solid gray;
-                                                                                                                                                                                                                                                        width:100%;
-                                                                                                                                                                                                                                                          padding:1vh;
-                                                                                                                                                                                                                                                            overflow-y: none;
-                                                                                                                                                                                                                                                              overflow-x:scroll;
-                                                                                                                                                                                                                                                              }
+#c-word {
+  display: block;
+  border: 1px solid gray;
+  width: 100%;
+  padding: 1vh;
+  overflow-y: none;
+  overflow-x: scroll;
+}
 
-                                                                                                                                                                                                                                                              canva{
-                                                                                                                                                                                                                                                                display:block;
-                                                                                                                                                                                                                                                                  color:darkred;
-                                                                                                                                                                                                                                                                    margin:auto;
-                                                                                                                                                                                                                                                                      background-color: azure;
-                                                                                                                                                                                                                                                                        margin:3vh;
-                                                                                                                                                                                                                                                                          padding:3vh;
-                                                                                                                                                                                                                                                                            border-radius:2vh;
-                                                                                                                                                                                                                                                                            }
+canva {
+  display: block;
+  color: darkred;
+  margin: auto;
+  background-color: azure;
+  padding: 3vh;
+  border-radius: 2vh;
+}
