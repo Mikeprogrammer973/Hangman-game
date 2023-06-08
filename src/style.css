@@ -150,12 +150,11 @@ footer p {
 }
 
 #c-word {
-  display: block;
+  display: flex;
   border: 1px solid gray;
   width: 100%;
   padding: 1vh;
-  overflow-y: none;
-  overflow-x: scroll;
+  overflow: scroll;
 }
 
 canva {
