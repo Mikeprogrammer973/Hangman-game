@@ -182,7 +182,7 @@ function fill_time_bar() {
       //alert("You lost!")
       c_msg.style.display = 'flex';
       c_msg.children[0].style.backgroundColor = 'darkred';
-      c_msg.children[0].innerHTML = 'Game over!';
+      c_msg.children[0].innerHTML = 'Game over!<hr>The word was: '+word;
       setTimeout(() => {
         c_msg.style.display = 'none';
         take_word();
