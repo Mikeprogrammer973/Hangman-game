@@ -11,7 +11,7 @@ let word;
 let c_word;
 let i_letter;
 let words = ['dog', 'cat', 'response'];
-let i_focused = false
+let i_focused = false;
 
 window.onload = () => {
   c_msg = document.getElementById('c-msg');
@@ -21,9 +21,9 @@ window.onload = () => {
   btn_r_w = document.getElementById('rand-w');
   bxs_errors = document.querySelectorAll('.error');
 
-  i_letter.addEventListener("focus", ()=>{
-    i_focused = true
-  })
+  i_letter.addEventListener('focus', () => {
+    i_focused = true;
+  });
 
   let containers_l = document.querySelectorAll('.container-logo');
   render_logo(containers_l[0], '5vh', '4vh bold monospace');
@@ -45,14 +45,18 @@ window.onload = () => {
     btn.style.color = 'darkgray';
   });
 
-  window.addEventListener("keydown", (e)=>{
-    if(e.keyCode == 13){
-      if(i_focused){
-        check_letter()
+  window.addEventListener('keydown', (e) => {
+    if (e.keyCode == 13) {
+      if (i_focused) {
+        check_letter();
       }
     }
-  })
+  });
 };
+
+function hangman(error) {
+  
+}
 
 function start_game() {
   //alert("Game started!")
@@ -113,7 +117,8 @@ function check_letter() {
       //alert("You lost!")
       c_msg.style.display = 'flex';
       c_msg.children[0].style.backgroundColor = 'darkred';
-      c_msg.children[0].innerHTML = 'Game over!<hr><em>The word was: '+word+"</em>";
+      c_msg.children[0].innerHTML =
+        'Game over!<hr><em>The word was: ' + word + '</em>';
       setTimeout(() => {
         c_msg.style.display = 'none';
         take_word();
@@ -182,7 +187,8 @@ function fill_time_bar() {
       //alert("You lost!")
       c_msg.style.display = 'flex';
       c_msg.children[0].style.backgroundColor = 'darkred';
-      c_msg.children[0].innerHTML = 'Game over!<hr><em>The word was: '+word+"</em>";
+      c_msg.children[0].innerHTML =
+        'Game over!<hr><em>The word was: ' + word + '</em>';
       setTimeout(() => {
         c_msg.style.display = 'none';
         take_word();
