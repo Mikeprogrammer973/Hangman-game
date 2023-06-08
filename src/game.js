@@ -113,7 +113,7 @@ function check_letter() {
     }
   } else {
     errors++;
-    if (errors == bxs_errors.length) {
+    if (errors == bxs_errors.length+1) {
       //alert("You lost!")
       c_msg.style.display = 'flex';
       c_msg.children[0].style.backgroundColor = 'darkred';
@@ -183,7 +183,7 @@ function fill_time_bar() {
   if (width >= 1002) {
     width = 0;
     errors++;
-    if (errors == bxs_errors.length+2) {
+    if (errors == bxs_errors.length+1) {
       //alert("You lost!")
       c_msg.style.display = 'flex';
       c_msg.children[0].style.backgroundColor = 'darkred';
