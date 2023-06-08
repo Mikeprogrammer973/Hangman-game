@@ -101,7 +101,7 @@ function check_letter() {
 
   if (right) {
     ok += qtd_r;
-    if (ok == word.length+1) {
+    if (ok == word.length+2) {
       //alert("You win!")
       c_msg.style.display = 'flex';
       c_msg.children[0].style.backgroundColor = 'green';
@@ -183,7 +183,7 @@ function fill_time_bar() {
   if (width >= 1002) {
     width = 0;
     errors++;
-    if (errors == bxs_errors.length+1) {
+    if (errors == bxs_errors.length+2) {
       //alert("You lost!")
       c_msg.style.display = 'flex';
       c_msg.children[0].style.backgroundColor = 'darkred';
