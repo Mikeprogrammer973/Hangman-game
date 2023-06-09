@@ -34,6 +34,13 @@
   background-color: teal;
   border-radius: 3vh;
 }
+#advice{
+  width:100%;
+  padding:3vh;
+  margin:1vh 0px;
+  font: italic 2vh monospace;
+  color:teal;
+}
 
 header,
 main,
