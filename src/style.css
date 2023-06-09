@@ -7,9 +7,9 @@
   font-family: monospace;
 }
 @media only screen and (min-width:500px){
-  main{
+  /*main{
     background-color:purple;
-  }
+  }*/
   #time-bar{
     width:40%!important;
   }
@@ -19,10 +19,8 @@
   #rand-w{
     width:20%!important;
   }
-  #c-boneco{
-    position:absolute!important;
-    top: 20vh;
-    left:60%;
+  #g-z-i{
+    display :flex;
   }
 }
 @keyframes bar {
