@@ -23,7 +23,7 @@
     display :flex;
   }
   #c-boneco{
-    margin-left:2vh;
+    margin-left:2vh!important;
   }
 }
 @keyframes bar {
