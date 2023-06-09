@@ -6,6 +6,11 @@
   box-sizing: border-box;
   font-family: monospace;
 }
+@media only screen and (min-width:500px){
+  main{
+    background-color:purple;
+  }
+}
 @keyframes bar {
   from {
     width: 0%;
