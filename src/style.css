@@ -38,7 +38,8 @@
   width:100%;
   padding:3vh;
   margin:1vh 0px;
-  font: italic 2vh monospace;
+  font: italic 2.5vh monospace;
+  letter-spacing: .5vh;
   color:teal;
 }
 
@@ -164,11 +165,10 @@ footer p {
   overflow: scroll;
 }
 
-canva {
+#c-boneco{
   display: block;
-  color: darkred;
   margin: auto;
-  background-color: azure;
-  padding: 3vh;
-  border-radius: 2vh;
+  background-color: brown;
+  width:200px;
+  height:300px;
 }
