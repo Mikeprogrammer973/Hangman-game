@@ -15,6 +15,9 @@
   }
   #c-word{
     width:40%!important;
+    height:300px!important;
+    align-items: center;
+    justify-content: center;
   }
   #rand-w{
     width:20%!important;
@@ -58,7 +61,7 @@
   width:100%;
   padding:3vh;
   margin:1vh 0px;
-  font: italic 2.5vh monospace;
+  font: italic 1.5vh monospace;
   letter-spacing: .5vh;
   color:teal;
 }
@@ -178,7 +181,7 @@ footer p {
 }
 
 #c-word {
-  display: flex;
+  display: inline-flex;
   border: 1px solid gray;
   width: 100%;
   padding: 1vh;
