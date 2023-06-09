@@ -22,6 +22,9 @@
   #g-z-i{
     display :flex;
   }
+  #c-boneco{
+    margin-left:2vh;
+  }
 }
 @keyframes bar {
   from {
