@@ -83,6 +83,10 @@ footer {
   justify-content: left;
   align-items: center;
 }
+header{
+  position:sticky;
+  top:-1px;
+}
 header h1 {
   font-size: 4vh;
   padding-left: 2vh;
