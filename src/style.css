@@ -10,6 +10,12 @@
   main{
     background-color:purple;
   }
+  #time-bar{
+    width:40%;
+  }
+  #c-word{
+    width:50%;
+  }
 }
 @keyframes bar {
   from {
