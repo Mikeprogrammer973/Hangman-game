@@ -72,7 +72,7 @@ function show_history(mode){
   
   let r_qtd = 0
   document.getElementById("h-w-s").innerHTML = ""
-  
+
   g_h.forEach((w)=>{
     let dv = document.createElement("div")
     dv.innerHTML = w[0]
@@ -82,9 +82,9 @@ function show_history(mode){
     }
     document.getElementById("h-w-s").append(dv)
   })
-  document.getElementById("win").innerHTML = r_qtd
-  document.getElementById("lost").innerHTML = g_h.length - r_qtd
-  document.getElementById("total").innerHTML = g_h.length
+  document.getElementById("win").innerHTML = "Win: " + r_qtd
+  document.getElementById("lost").innerHTML = "Lost: " + (g_h.length - r_qtd)
+  document.getElementById("total").innerHTML = "Total: " + g_h.length
 
   // Without details 
    if(!mode){
