@@ -246,3 +246,23 @@ footer p {
 #close:hover{
   background-color: darkred;
 }
+
+#h-i-g{
+  background-color: darkgray;
+}
+#h-i-g span{
+  display:inline-flex;
+  color: white;
+  padding: 1vh;
+  margin:1vh;
+  border-radius: 1vh;
+}
+#lost{
+  background-color: darkred;
+}
+#win{
+  background-color:green;
+}
+#total{
+  background-color: teal;
+}
