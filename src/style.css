@@ -211,3 +211,38 @@ footer p {
   width:200px;
   height:300px;
 }
+
+
+#c-g-h{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-color: rgb(0, 0, 0, 0.567);
+}
+#c-g-h > *{
+  border: 1px solid black;
+  width:70%;
+  padding: 2vh;
+  margin: auto;
+}
+#h-t{
+  background-color: white;
+}
+#h-t > *{
+  display: inline-flex;
+  align-items: center;
+  /*border:2px solid red;*/
+}
+#close{
+  width: 3.5vh;
+  height:3.5vh;
+  border-radius:50%;
+  background-color: whitesmoke;
+}
+#h-t h4{
+  font-size:4vh;
+  color:darkgray;
+}
+#close:hover{
+  background-color: darkred;
+}
