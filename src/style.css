@@ -271,7 +271,7 @@ footer p {
 
 #h-w-s{
   padding: 0px;
-  maxheight: 50vh;
+  max-height: 50vh;
   overflow-y: scroll;
 }
 #h-w-s > *{

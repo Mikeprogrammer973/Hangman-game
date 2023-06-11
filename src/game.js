@@ -69,9 +69,10 @@ function update_history(word, stat){
 }
 function show_history(mode){
   g_h = JSON.parse(localStorage.game_history)
-  // Without details 
+  
   let r_qtd = 0
   document.getElementById("h-w-s").innerHTML = ""
+  
   g_h.forEach((w)=>{
     let dv = document.createElement("div")
     dv.innerHTML = w[0]
@@ -81,11 +82,16 @@ function show_history(mode){
     }
     document.getElementById("h-w-s").append(dv)
   })
+  document.getElementById("win").innerHTML = r_qtd
+  document.getElementById("lost").innerHTML = g_h.length - r_qtd
+  document.getElementById("total").innerHTML = g_h.length
+
+  // Without details 
    if(!mode){
      document.getElementById("game-history").innerHTML = `${r_qtd}/${g_h.length}`
      return
    }
-   // With details 
+  // With details 
    document.getElementById("c-g-h").style.display = "block"
 
 }
