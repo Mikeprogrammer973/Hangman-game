@@ -101,7 +101,7 @@ function check_letter() {
 
   if (right) {
     ok += qtd_r;
-    if (ok == word.length+2) {
+    if (ok == word.length) {
       //alert("You win!")
       c_msg.style.display = 'flex';
       c_msg.children[0].style.backgroundColor = 'green';
