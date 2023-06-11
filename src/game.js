@@ -12,13 +12,16 @@ let c_word;
 let i_letter;
 let words = ['dog', 'cat', 'response'];
 let i_focused = false;
+let g_h 
 
 window.onload = () => {
 
   if(!localStorage.game_history){
     localStorage.game_history = JSON.stringify([])
   }
-  alert(localStorage.game_history)
+
+  show_history(false)
+
   c_msg = document.getElementById('c-msg');
   c_word = document.getElementById('c-word');
   i_letter = document.getElementById('i-letter');
@@ -58,6 +61,27 @@ window.onload = () => {
     }
   });
 };
+
+function update_history(word, stat){
+  g_h.push([word, stat]);
+  localStorage.game_history = JSON.stringify(g_h)
+  show_history(false)
+}
+function show_history(mode){
+  g_h = JSON.parse()
+  // Without details 
+   if(!mode){
+     let r_qtd = 0
+     g_h.forEach((w)=>{
+       if(w[1]){
+         r_qtd++
+       }
+     })
+     document.getElementById("game-history").innerHTML = `${r_qtd}/${g_h.length}`
+     return
+   }
+   // With details 
+}
 
 function hangman(error) {
 
