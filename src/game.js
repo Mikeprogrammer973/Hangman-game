@@ -166,12 +166,20 @@ function take_word() {
     }
     //Dica
     //alert(word)
-    c_word.children[0].innerHTML = word[0].toUpperCase();
-    alrd_ok.push(word[0]);
-    c_word.children[word.length - 1].innerHTML =
-      word[word.length - 1].toUpperCase();
-    alrd_ok.push(word[word.length - 1]);
-    ok += 2;
+    let ld1 = word[0]
+    let ld2 
+    let i = 0
+    while(i < word.length){
+      if(word[i] != ld1){
+        ld2 = word[i]
+        break
+      }
+      i++
+    }
+    i_letter.value = ld1
+    check_letter()
+    i_letter.value = ld2
+    check_letter()
     //
     i_letter.focus();
     fill_time_bar();
