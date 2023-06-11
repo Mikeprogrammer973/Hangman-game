@@ -68,7 +68,7 @@ function update_history(word, stat){
   show_history(false)
 }
 function show_history(mode){
-  g_h = JSON.parse()
+  g_h = JSON.parse(localStorage.game_history)
   // Without details 
    if(!mode){
      let r_qtd = 0
@@ -137,6 +137,7 @@ function check_letter() {
       c_msg.children[0].innerHTML = 'You win!';
       setTimeout(() => {
         c_msg.style.display = 'none';
+        update_history(word, true)
         take_word();
       }, 3000);
     }
@@ -150,6 +151,7 @@ function check_letter() {
         'Game over!<hr><em>The word was: ' + word + '</em>';
       setTimeout(() => {
         c_msg.style.display = 'none';
+        update_history(word, false)
         take_word();
       }, 3000);
     } else {
@@ -228,6 +230,7 @@ function fill_time_bar() {
         'Game over!<hr><em>The word was: ' + word + '</em>';
       setTimeout(() => {
         c_msg.style.display = 'none';
+        update_history(word, false)
         take_word();
       }, 3000);
     } else {
