@@ -139,6 +139,7 @@ footer p {
   font-family: 'Courier New', Courier, monospace;
   background-color: skyblue;
   color: teal;
+  cursor: pointer;
 }
 
 #l-errors,
