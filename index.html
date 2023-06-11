@@ -18,7 +18,7 @@
     </header>
     <section id="c-g-h">
       <div id="h-t">
-        <div id="close"></div>
+        <div id="close" onclick="document.getElementById('c-g-h').style.display = 'none'"></div>
         <h4>Game History</h4>
       </div>
       <div id="h-i-g">
@@ -36,7 +36,7 @@
         <div id="time-bar">
           <div></div>
         </div>
-        <p id="game-history">0/0</p>
+        <p onclick="show_history(true)" id="game-history">0/0</p>
       </section>
       <section id="game-zone">
         <div id="l-errors">
