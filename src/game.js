@@ -14,6 +14,11 @@ let words = ['dog', 'cat', 'response'];
 let i_focused = false;
 
 window.onload = () => {
+
+  if(!localStorage.game_history){
+    localStorage.game_history = JSON.stringify([])
+  }
+  alert(localStorage.game_history)
   c_msg = document.getElementById('c-msg');
   c_word = document.getElementById('c-word');
   i_letter = document.getElementById('i-letter');
