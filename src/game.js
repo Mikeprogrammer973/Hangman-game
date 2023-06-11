@@ -70,17 +70,24 @@ function update_history(word, stat){
 function show_history(mode){
   g_h = JSON.parse(localStorage.game_history)
   // Without details 
+  let r_qtd = 0
+  document.getElementById("h-w-s").innerHTML = ""
+  g_h.forEach((w)=>{
+    let dv = document.createElement("div")
+    dv.innerHTML = w[0]
+    if(w[1]){
+      dv.style.backgroundColor = "green"
+      r_qtd++
+    }
+    document.getElementById("h-w-s").append(dv)
+  })
    if(!mode){
-     let r_qtd = 0
-     g_h.forEach((w)=>{
-       if(w[1]){
-         r_qtd++
-       }
-     })
      document.getElementById("game-history").innerHTML = `${r_qtd}/${g_h.length}`
      return
    }
    // With details 
+   document.getElementById("c-g-h").style.display = "block"
+
 }
 
 function hangman(error) {
