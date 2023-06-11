@@ -214,9 +214,11 @@ footer p {
 
 
 #c-g-h{
+  display: none;
   position:fixed;
   width:100%;
   height:100%;
+  padding-top: 5vh;
   background-color: rgb(0, 0, 0, 0.567);
 }
 #c-g-h > *{
@@ -265,4 +267,17 @@ footer p {
 }
 #total{
   background-color: teal;
+}
+
+#h-w-s{
+  padding: 0px;
+  max-height: 10vh;
+  overflow-y: scroll;
+}
+#h-w-s > *{
+  width: 100%;
+  padding: 2vh;
+  color:white;
+  /*background-color: red;*/
+  text-align: center;
 }
