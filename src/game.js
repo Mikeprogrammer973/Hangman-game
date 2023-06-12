@@ -212,6 +212,7 @@ function stop_game() {
     bx.innerHTML = '';
   });
   cancelAnimationFrame(animation);
+  document.getElementById('time-bar').children[0].style.width = `${width}%`;
 }
 
 function check_letter() {
