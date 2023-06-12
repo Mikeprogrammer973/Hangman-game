@@ -206,6 +206,11 @@ function stop_game() {
   i_letter.value = '';
   draw.clear();
   clearInterval(intv_piscar);
+  width = 0;
+  bxs_errors.forEach((bx) => {
+    bx.style.backgroundColor = 'green';
+    bx.innerHTML = '';
+  });
   cancelAnimationFrame(animation);
 }
 
