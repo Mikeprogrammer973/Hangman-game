@@ -130,22 +130,22 @@ function hangman(error) {
     draw.circle(50).fill("red").move(75, 50)
   }
   if(error == 2){
-    draw.line(150, 95, 150, 225).move(100, 55).stroke({color:'black', width: 10, linecap: 'round'})
+    draw.line(150, 95, 150, 225).move(100, 55).stroke({color:'red', width: 10, linecap: 'round'})
   }
   if(error == 3){
-    let bras1 = draw.line(40, 40, 50, 50).move(100, 55).stroke({color:'black', width: 10, linecap: 'round'})
+    let bras1 = draw.line(40, 40, 50, 50).move(100, 55).stroke({color:'red', width: 10, linecap: 'round'})
     bras1.animate(300).plot(100, 125, 120, 165)
   }
   if(error == 4){
-    let bras2 = draw.line(40, 40, 50, 50).move(100, 55).stroke({color:'black', width: 10, linecap: 'round'})
+    let bras2 = draw.line(40, 40, 50, 50).move(100, 55).stroke({color:'red', width: 10, linecap: 'round'})
     bras2.animate(300).plot(100, 125, 80, 165)
   }
   if(error == 5){
-    let pied1 = draw.line(40, 40, 50, 50).move(100, 55).stroke({color:'black', width: 10, linecap: 'round'})
+    let pied1 = draw.line(40, 40, 50, 50).move(100, 55).stroke({color:'red', width: 10, linecap: 'round'})
     pied1.animate(300).plot(100, 185, 120, 220)
   }
   if(error == 6){
-    let pied2 = draw.line(40, 40, 50, 50).move(100, 55).stroke({color:'black', width: 10, linecap: 'round'})
+    let pied2 = draw.line(40, 40, 50, 50).move(100, 55).stroke({color:'red', width: 10, linecap: 'round'})
     pied2.animate(300).plot(100, 185, 80, 220)
 
     intv_piscar = setInterval(()=>{
@@ -214,6 +214,7 @@ function check_letter() {
     }
   } else {
     errors++;
+    hangman(errors)
     if (errors == bxs_errors.length + 1) {
       //alert("You lost!")
       c_msg.style.display = 'flex';
