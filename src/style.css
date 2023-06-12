@@ -208,6 +208,7 @@ footer p {
   display: block;
   margin: auto;
   background-color: transparent;
+  border: 1px solid darkgray;
   width:200px;
   height:300px;
 }
