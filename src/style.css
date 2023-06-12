@@ -207,7 +207,7 @@ footer p {
 #c-boneco{
   display: block;
   margin: auto;
-  background-color: brown;
+  background-color: transparent;
   width:200px;
   height:300px;
 }

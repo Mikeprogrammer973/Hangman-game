@@ -108,6 +108,7 @@ function piscar() {
   } else {
     c_i = 0;
   }
+  document.getElementById("c-boneco").style.backgroundColor = color
 }
 
 function hangman(error) {
