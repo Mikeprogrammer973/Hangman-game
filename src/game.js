@@ -295,6 +295,7 @@ function fill_time_bar() {
   if (width >= 1002) {
     width = 0;
     errors++;
+    hangman(errors)
     if (errors == bxs_errors.length + 1) {
       //alert("You lost!")
       c_msg.style.display = 'flex';
