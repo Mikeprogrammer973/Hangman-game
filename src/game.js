@@ -14,11 +14,11 @@ let words = ['dog', 'cat', 'response'];
 let i_focused = false;
 let g_h;
 let c_i = 0;
-let draw
-let intv_piscar
+let draw;
+let intv_piscar;
 
 window.onload = () => {
-  draw = SVG().addTo("#c-boneco").size(200, 300)
+  draw = SVG().addTo('#c-boneco').size(200, 300);
 
   if (!localStorage.game_history) {
     localStorage.game_history = JSON.stringify([]);
@@ -108,54 +108,84 @@ function piscar() {
   } else {
     c_i = 0;
   }
-  document.getElementById("c-boneco").style.backgroundColor = color
+  document.getElementById('c-boneco').style.backgroundColor = color;
 }
 
 function hangman(error) {
-  if(error == 1){
-    let p1 = draw.line(5, 190, 190, 290).move(190, 5).stroke({color:'black', width: 10, linecap: 'round'})
-    p1.plot(20, 10, 20, 280)
+  if (error == 1) {
+    let p1 = draw
+      .line(5, 190, 190, 290)
+      .move(190, 5)
+      .stroke({ color: 'black', width: 10, linecap: 'round' });
+    p1.plot(20, 10, 20, 280);
 
-    let p2 = draw.line(5, 190, 190, 290).move(190, 5).stroke({color:'black', width: 10, linecap: 'round'})
-    p2.plot(20, 10, 100, 10)
+    let p2 = draw
+      .line(5, 190, 190, 290)
+      .move(190, 5)
+      .stroke({ color: 'black', width: 10, linecap: 'round' });
+    p2.plot(20, 10, 100, 10);
 
-    let p3 = draw.line(5, 190, 190, 290).move(190, 5).stroke({color:'black', width: 10, linecap: 'round'})
-    p3.plot(70, 10, 20, 50)
+    let p3 = draw
+      .line(5, 190, 190, 290)
+      .move(190, 5)
+      .stroke({ color: 'black', width: 10, linecap: 'round' });
+    p3.plot(70, 10, 20, 50);
 
-    let p4 = draw.line(5, 190, 190, 290).move(190, 5).stroke({color:'black', width: 10, linecap: 'round'})
-    p4.plot(100, 10, 100, 50)
+    let p4 = draw
+      .line(5, 190, 190, 290)
+      .move(190, 5)
+      .stroke({ color: 'black', width: 10, linecap: 'round' });
+    p4.plot(100, 10, 100, 50);
 
-    let p5 = draw.line(5, 190, 190, 290).move(190, 5).stroke({color:'black', width: 10, linecap: 'round'})
-    p5.plot(10, 285, 100, 285)
+    let p5 = draw
+      .line(5, 190, 190, 290)
+      .move(190, 5)
+      .stroke({ color: 'black', width: 10, linecap: 'round' });
+    p5.plot(10, 285, 100, 285);
 
-    draw.circle(50).fill("red").move(75, 50)
+    draw.circle(50).fill('red').move(75, 50);
   }
-  if(error == 2){
-    draw.line(150, 95, 150, 225).move(100, 55).stroke({color:'red', width: 10, linecap: 'round'})
+  if (error == 2) {
+    draw
+      .line(150, 95, 150, 225)
+      .move(100, 55)
+      .stroke({ color: 'red', width: 10, linecap: 'round' });
   }
-  if(error == 3){
-    let bras1 = draw.line(40, 40, 50, 50).move(100, 55).stroke({color:'red', width: 10, linecap: 'round'})
-    bras1.animate(300).plot(100, 125, 120, 165)
+  if (error == 3) {
+    let bras1 = draw
+      .line(40, 40, 50, 50)
+      .move(100, 55)
+      .stroke({ color: 'red', width: 10, linecap: 'round' });
+    bras1.animate(300).plot(100, 125, 120, 165);
   }
-  if(error == 4){
-    let bras2 = draw.line(40, 40, 50, 50).move(100, 55).stroke({color:'red', width: 10, linecap: 'round'})
-    bras2.animate(300).plot(100, 125, 80, 165)
+  if (error == 4) {
+    let bras2 = draw
+      .line(40, 40, 50, 50)
+      .move(100, 55)
+      .stroke({ color: 'red', width: 10, linecap: 'round' });
+    bras2.animate(300).plot(100, 125, 80, 165);
   }
-  if(error == 5){
-    let pied1 = draw.line(40, 40, 50, 50).move(100, 55).stroke({color:'red', width: 10, linecap: 'round'})
-    pied1.animate(300).plot(100, 185, 120, 220)
+  if (error == 5) {
+    let pied1 = draw
+      .line(40, 40, 50, 50)
+      .move(100, 55)
+      .stroke({ color: 'red', width: 10, linecap: 'round' });
+    pied1.animate(300).plot(100, 185, 120, 220);
   }
-  if(error == 6){
-    let pied2 = draw.line(40, 40, 50, 50).move(100, 55).stroke({color:'red', width: 10, linecap: 'round'})
-    pied2.animate(300).plot(100, 185, 80, 220)
+  if (error == 6) {
+    let pied2 = draw
+      .line(40, 40, 50, 50)
+      .move(100, 55)
+      .stroke({ color: 'red', width: 10, linecap: 'round' });
+    pied2.animate(300).plot(100, 185, 80, 220);
 
-    intv_piscar = setInterval(()=>{
-      piscar()
-    }, 300)
+    intv_piscar = setInterval(() => {
+      piscar();
+    }, 300);
   }
-  if(error == 7){
-    clearInterval(intv_piscar)
-    draw.clear()
+  if (error == 7) {
+    clearInterval(intv_piscar);
+    draw.clear();
   }
 }
 
@@ -174,6 +204,8 @@ function stop_game() {
   btn_v.setAttribute('disabled', '');
   i_letter.setAttribute('disabled', '');
   i_letter.value = '';
+  draw.clear();
+  clearInterval(intv_piscar);
   cancelAnimationFrame(animation);
 }
 
@@ -208,6 +240,8 @@ function check_letter() {
       c_msg.children[0].style.backgroundColor = 'green';
       c_msg.children[0].innerHTML = 'You win!';
       setTimeout(() => {
+        draw.clear();
+        clearInterval(intv_piscar);
         c_msg.style.display = 'none';
         update_history(word, true);
         take_word();
@@ -215,7 +249,7 @@ function check_letter() {
     }
   } else {
     errors++;
-    hangman(errors)
+    hangman(errors);
     if (errors == bxs_errors.length + 1) {
       //alert("You lost!")
       c_msg.style.display = 'flex';
@@ -295,7 +329,7 @@ function fill_time_bar() {
   if (width >= 1002) {
     width = 0;
     errors++;
-    hangman(errors)
+    hangman(errors);
     if (errors == bxs_errors.length + 1) {
       //alert("You lost!")
       c_msg.style.display = 'flex';
