@@ -261,7 +261,7 @@ function check_letter() {
       c_msg.style.display = 'flex';
       c_msg.children[0].style.backgroundColor = 'darkred';
       c_msg.children[0].innerHTML =
-        'Game over!<hr><em>The word was: ' + word + '</em>';
+        'Game over!';
       setTimeout(() => {
         c_msg.style.display = 'none';
         update_history(word, false);
@@ -287,6 +287,7 @@ function take_word() {
     bx.style.backgroundColor = 'green';
     bx.innerHTML = '';
   });
+  document.getElementById("c-boneco").style.backgroundColor = 'transparent'
   c_word.innerHTML = '';
   random_word().then((data) => {
     word = data.word;
@@ -341,7 +342,7 @@ function fill_time_bar() {
       c_msg.style.display = 'flex';
       c_msg.children[0].style.backgroundColor = 'darkred';
       c_msg.children[0].innerHTML =
-        'Game over!<hr><em>The word was: ' + word + '</em>';
+        'Game over!';
       setTimeout(() => {
         c_msg.style.display = 'none';
         update_history(word, false);
