@@ -39,7 +39,7 @@ window.onload = () => {
 
   let containers_l = document.querySelectorAll('.container-logo');
   render_logo(containers_l[0], '3vh', '3vh bold monospace');
-  render_logo(containers_l[1], '1.5vh', '2vh bold monospace');
+  render_logo(containers_l[1], '1.5vh', '1.3vh bold monospace');
 
   let btn = document.getElementById('btn-init-stop');
   btn.addEventListener('mouseenter', (e) => {
